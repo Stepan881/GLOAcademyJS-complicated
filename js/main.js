@@ -1,11 +1,21 @@
 "use strict";
 
+const week = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+let date = new Date().getDay() ;
+let arr = [];
 
-let week = ['пн','вт','ср','чт','пт','сб','вс' ];
-let date = new Date().getDay();
+week.forEach((el, i) => {
+  arr.push(el);
 
-week.splice(date-1, 1 , week[date-1].bold());
-week.splice(5, 2, week[date].italics(), week[date+1].italics());
-console.log(week.join('\n'));
+  if (date === i) {
+    arr[i] = el.italics();
+  } 
+  if (el === 'вс' || el === 'сб') {
+    arr[i] = el.bold();
+  }   
+  if ((el === 'вс' && date === i) || (el === 'сб' && date === i)) {
+    arr[i] = el.italics().bold();
+  } 
+});
 
-
+document.write(arr.join('\n'));
