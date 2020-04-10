@@ -3,10 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+  <title>New color</title>
+  <style type="text/css">
+  .body{
+    text-align: center;
+    transition: 0.3s;
+  }
+  .head {
+    margin: 50px 0;
+  }
+  .btn {
+    padding: 15px 30px;
+    border: 2px solid red;
+    background-color: inherit;
+    opacity: 0.8;
+    color: black;
+    font-weight: 900;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .btn:hover {
+    color: red;
+    background-color: rgb(236, 172, 9);
+  }
   
+  </style>
+</head>
+<body class="body">
+  <h1 class="head">#color</h1>
+  <button class="btn">New color</button>
 
   <script src="./js/main.js"></script>
 </body>
